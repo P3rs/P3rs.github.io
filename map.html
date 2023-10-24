@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/map.css" />
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Weather</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__wrap">
+                <div class="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <a class="logo" href="today-weather.html"><i class="fa fa-skyatlas fa-2x"></i></a>
+                <ul class="menu" id="menu">
+                    <li><a href="today-weather.html">Погода сейчас</a></li>
+                    <li><a href="tenday-weather.html">Прогноз на 10 дней</a></li>
+                    <li><a href="month-weather.html">Прогноз на месяц</a></li>
+                    <li><a href="map.html">Карта осадков</a></li>
+                </ul>
+                <a class="author-logo" href="author.html"><i class="fa fa-user fa-2x"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="popup" id="popup"></div>
+
+    <main>
+        <iframe class="map" src="https://embed.windy.com/embed2.html?lat=55.329&lon=37.617&detailLat=55.748&detailLon=37.617&width=650&height=450&zoom=5&level=surface&overlay=rain&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1"
+            frameborder="0"></iframe>
+    </main>
+
+    <footer></footer>
+    <script src="/assets/scripts/map.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/month.css" />
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Weather</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__wrap">
+                <div class="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <a class="logo" href="today-weather.html"><i class="fa fa-skyatlas fa-2x"></i></a>
+                <ul class="menu" id="menu">
+                    <li><a href="today-weather.html">Погода сейчас</a></li>
+                    <li><a href="tenday-weather.html">Прогноз на 10 дней</a></li>
+                    <li><a href="month-weather.html">Прогноз на месяц</a></li>
+                    <li><a href="map.html">Карта осадков</a></li>
+                </ul>
+                <a class="author-logo" href="author.html"><i class="fa fa-user fa-2x"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="popup" id="popup"></div>
+
+    <main>
+        <div class="container__main">
+            <div class="main-block">
+                <h2>Погода на месяц</h2>
+                <table class="month-table">
+                    <tr>
+                        <th>Пн</th>
+                        <th>Вт</th>
+                        <th>Ср</th>
+                        <th>Чт</th>
+                        <th>Пт</th>
+                        <th>
+                            <p class="weekday">Сб</p>
+                        </th>
+                        <th>
+                            <p class="weekday">Вс</p>
+                        </th>
+                    </tr>
+                    <tr class="1">
+                        <td>
+                            <h3 class="table-date">1</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">2</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">3</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">4</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">5</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">6</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">7</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="2">
+                        <td>
+                            <h3 class="table-date">8</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">9</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">10</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">11</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">12</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">13</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">14</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="3">
+                        <td>
+                            <h3 class="table-date">15</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">16</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">17</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">18</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">19</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">20</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">21</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="4">
+                        <td>
+                            <h3 class="table-date">22</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">23</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">24</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">25</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">26</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">27</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">28</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="5">
+                        <td>
+                            <h3 class="table-date">29</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">30</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">31</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">32</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="table-date">33</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">34</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                        <td>
+                            <h3 class="weekday table-date">35</h3>
+                            <div class="table-weather">
+                                <img src="/assets/img/weather-icons/clouds.png" width="70rem" />
+                                <div class="table-temperature">
+                                    <p class="table-day-temperature">-1°</p>
+                                    <p class="table-night-temperature">-2°</p>
+                                </div>
+                                <div></div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <h2>В среднем за 30 дней</h2>
+                <div class="analytic">
+                    <div id="my-pie-chart-container">
+
+                        <div id="my-pie-chart"></div>
+                        <div id="legenda">
+                            <div class="entry">
+                                <div id="color-yasno" class="entry-color"></div>
+                                <div class="entry-text">Ясные дни</div>
+                            </div>
+                            <div class="entry">
+                                <div id="color-pasmurno" class="entry-color"></div>
+                                <div class="entry-text">Дни с длительными осадками</div>
+                            </div>
+                            <div class="entry">
+                                <div id="color-oblachno" class="entry-color"></div>
+                                <div class="entry-text">Дни с переменной облачностью</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="average-stats">
+                        <div class="humidity">
+                            <img src="/assets/img/drop.png" width="50rem">
+                            <div class="avstats">85</div>
+                            <div class="aver">%, влажность воздуха</div>
+                        </div>
+                        <div class="precip">
+                            <img src="/assets/img/year_norm.png" width="50rem">
+                            <div class="avstats">25</div>
+                            <div class="aver">мм осадков, (4% годовой нормы)</div>
+                        </div>
+                        <div class="wind">
+                            <img src="/assets/img/wind.png" width="50rem">
+                            <div class="avstats">4,8</div>
+                            <div class="aver">м/с, ветер ЮЗ</div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container__footer">
+            <div>
+                <h3 class="label_h3">O нас</h3>
+                <span>Данный сайт является курсовой работой студента РТУ МИРЭА, ИКБО-16-21 Наранова Персияна. Темой курсовой работы является "Прогноз погоды".</span>
+                <div class="footer__img__container container__footer2">
+                    <div class="footer__img">
+                        <a href="#">
+                            <i class="fa fa-vk fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="footer__img">
+                        <a href="#">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="footer__img">
+                        <a href="#">
+                            <i class="fa fa-paper-plane fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="footer__img">
+                        <a href="#">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="label_h3">Контакты</h3>
+                <ul>
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <a href="https://yandex.ru/maps/213/moscow/house/prospekt_vernadskogo_78s4/Z04Ycg9gTUUOQFtvfXp3eHVrYg==/?from=tabbar&ll=37.481133%2C55.669731&source=serp_navig&z=17.21">Проспект Вернадского, 78, Москва, 119454</a
+                    >
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <a href="tel:+79999999999">+7 999 999 99 99</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:persnaranov@mail.ru">persnaranov@mail.ru</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/scripts/month.js"></script>
+</body>
+
+</html>

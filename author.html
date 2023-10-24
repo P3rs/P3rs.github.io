@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/author.css" />
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Weather</title>
+</head>
+
+<body>
+    <main>
+        <div class="container__main">
+            <div class="main-block">
+                <a class="btn" href="today-weather.html"><i class="fa fa-angle-double-left fa-3x"></i></a>
+                <form action="today-weather.html">
+                    <input checked="" id="signin" name="action" type="radio" value="signin">
+                    <label for="signin">Войти</label>
+                    <input id="signup" name="action" type="radio" value="signup">
+                    <label for="signup">Регистрация</label>
+                    <input id="reset" name="action" type="radio" value="reset">
+                    <label for="reset">Сброс пароля</label>
+                    <div id="wrapper">
+                        <input id="email" placeholder="Email" type="text">
+                        <input id="pass" placeholder="Пароль" type="password">
+                        <input id="repass" placeholder="Подтвердите пароль" type="password">
+                    </div>
+                    <button type="submit">
+                <span>
+                    Сброс
+                    <br>
+                    Войти
+                    <br>
+                    Регистрация
+                </span>
+                </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

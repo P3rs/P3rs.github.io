@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/styles/today.css" />
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Weather</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar__wrap">
+                <div class="hamb">
+                    <div class="hamb__field" id="hamb">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+                <a class="logo" href="today-weather.html"><i class="fa fa-skyatlas fa-2x"></i></a>
+                <ul class="menu" id="menu">
+                    <li><a href="today-weather.html">Погода сейчас</a></li>
+                    <li><a href="tenday-weather.html">Прогноз на 10 дней</a></li>
+                    <li><a href="month-weather.html">Прогноз на месяц</a></li>
+                    <li><a href="map.html">Карта осадков</a></li>
+                </ul>
+                <a class="author-logo" href="author.html"><i class="fa fa-user fa-2x"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="popup" id="popup"></div>
+
+    <main>
+        <div class="container__main">
+            <div class="main-block">
+                <div class="weather-box">
+                    <div class="city-data">
+                        <h4 class="city">Москва</h4>
+                        <div class="date-now"></div>
+                    </div>
+                    <div class="weather-now">
+                        <div class="temp__container">
+                            <div class="temperature">
+                                <p>+1°</p>
+                                <img src="/assets/img/weather-icons/raining.png" width="60rem" />
+                            </div>
+                            <div class="definition-weather">
+                                <p class="definition">Дождь со снегом</p>
+                                <p class="real-temp">Ощущается как -5°</p>
+                            </div>
+                        </div>
+                        <div class="wind-hum-atmopres">
+                            <div class="wind">
+                                <div class="date-now">Скорость ветра</div>
+                                <div><img src="/assets/img/wind.png" width="25rem" />
+                                    <p>5,3 м/с, Ю</p>
+                                </div>
+                            </div>
+                            <div class="humid">
+                                <div class="date-now">Влажность</div>
+                                <div><img src="/assets/img/drop.png" width="25rem" />
+                                    <p>93%</p>
+                                </div>
+                            </div>
+                            <div class="atmopres">
+                                <div class="date-now">Давление</div>
+                                <div><img src="/assets/img/thermometer.png" width="25rem" />
+                                    <p>743 мм рт. ст.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="widgets">
+                    <div class="hour-card1 hour-card">
+                        <h4>13:00</h4>
+                        <img src="/assets/img/weather-icons/raining.png" width="60rem">
+                        <h3>+1°</h3>
+                    </div>
+                    <div class="hour-card2 hour-card">
+                        <h4>14:00</h4>
+                        <img src="/assets/img/weather-icons/raining.png" width="60rem">
+                        <h3>+2°</h3>
+                    </div>
+                    <div class="hour-card3 hour-card">
+                        <h4>15:00</h4>
+                        <img src="/assets/img/weather-icons/cloud.png" width="60rem">
+                        <h3>+2°</h3>
+                    </div>
+                    <div class="hour-card4 hour-card">
+                        <h4>16:00</h4>
+                        <img src="/assets/img/weather-icons/cloud.png" width="60rem">
+                        <h3>+3°</h3>
+                    </div>
+                    <div class="hour-card5 hour-card">
+                        <h4>17:00</h4>
+                        <img src="/assets/img/weather-icons/cloud.png" width="60rem">
+                        <h3>+2°</h3>
+                    </div>
+                    <div class="hour-card6 hour-card">
+                        <h4>18:00</h4>
+                        <img src="/assets/img/weather-icons/raining.png" width="60rem">
+                        <h3>+1°</h3>
+                    </div>
+                    <div class="hour-card7 hour-card">
+                        <h4>19:00</h4>
+                        <img src="/assets/img/weather-icons/raining.png" width="60rem">
+                        <h3>+1°</h3>
+                    </div>
+                    <div class="hour-card8 hour-card">
+                        <h4>20:00</h4>
+                        <img src="/assets/img/weather-icons/raining.png" width="60rem">
+                        <h3>-1°</h3>
+                    </div>
+                    <div class="hour-card9 hour-card">
+                        <h4>21:00</h4>
+                        <img src="/assets/img/weather-icons/raining.png" width="60rem">
+                        <h3>-3°</h3>
+                    </div>
+                    <div class="hour-card10 hour-card">
+                        <h4>22:00</h4>
+                        <img src="/assets/img/weather-icons/clouds.png" width="60rem">
+                        <h3>-4°</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container__footer">
+            <div>
+                <h3 class="label_h3">O нас</h3>
+                <span>Данный сайт является курсовой работой студента РТУ МИРЭА, ИКБО-16-21 Наранова Персияна. Темой курсовой работы является "Прогноз погоды".</span>
+                <div class="footer__img__container container__footer2">
+                    <div class="footer__img">
+                        <a href="#">
+                            <i class="fa fa-vk fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="footer__img">
+                        <a href="#">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="footer__img">
+                        <a href="#">
+                            <i class="fa fa-paper-plane fa-2x"></i>
+                        </a>
+                    </div>
+                    <div class="footer__img">
+                        <a href="#">
+                            <i class="fa fa-twitter fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3 class="label_h3">Контакты</h3>
+                <ul>
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <a href="https://yandex.ru/maps/213/moscow/house/prospekt_vernadskogo_78s4/Z04Ycg9gTUUOQFtvfXp3eHVrYg==/?from=tabbar&ll=37.481133%2C55.669731&source=serp_navig&z=17.21">Проспект Вернадского, 78, Москва, 119454</a
+                    >
+                    </li>
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <a href="tel:+79999999999">+7 999 999 99 99</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href="mailto:persnaranov@mail.ru">persnaranov@mail.ru</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/scripts/today.js"></script>
+</body>
+
+</html>

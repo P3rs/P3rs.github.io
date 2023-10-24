@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #3aa0ff;
+    transition: all 0.3s;
+}
+
+html {
+    max-width: 100vw;
+}
+
+body,
+main,
+header,
+footer {
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+/* HEADER ---------------------------------------------------------*/
+
+.navbar {
+    z-index: 1;
+    position: sticky;
+    left: 0;
+    top: 0;
+    background: aliceblue;
+    padding: 1rem 0;
+}
+
+.navbar>.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.navbar__wrap {
+    display: flex;
+    justify-content: left;
+    height: 100%;
+}
+
+.hamb {
+    display: none;
+}
+
+.popup {
+    display: none;
+}
+
+.menu>li>a {
+    text-decoration: none;
+}
+
+.menu {
+    padding-left: 1rem;
+}
+
+.author-logo {
+    margin-left: auto;
+}
+
+.navbar__wrap .menu {
+    display: flex;
+    width: 100%;
+}
+
+.navbar__wrap .menu>li {
+    display: flex;
+}
+
+.navbar__wrap .menu>li>a {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.navbar__wrap .menu>li:first-child>a {
+    padding: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .menu {
+        padding-left: 0;
+    }
+    .logo {
+        padding-left: 1rem;
+    }
+    .navbar__wrap .menu {
+        display: none;
+    }
+    .hamb {
+        display: flex;
+        align-items: center;
+    }
+    .hamb__field {
+        cursor: pointer;
+    }
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: black;
+        transition: 0.2s;
+    }
+    .popup {
+        position: fixed;
+        top: 3rem;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: aliceblue;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+    }
+    .popup.open {
+        left: 0;
+    }
+    .popup .menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 50px 0;
+        overflow: auto;
+    }
+    .popup .menu>li {
+        width: 100%;
+    }
+    .popup .menu>li>a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #3f3f3f;
+    }
+    .hamb__field.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamb__field.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamb__field.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+    body.noscroll {
+        overflow: hidden;
+    }
+}
+
+
+/* MAIN ---------------------------------------------------------*/
+
+main {
+    flex-grow: 1;
+    background: url("/assets/img/main-cloud1.jpg") no-repeat center center fixed;
+}
+
+.container__main {
+    height: fit-content;
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.main-block {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.429);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+}
+
+
+/* ------------------ACT WEATHER------------------------ */
+
+.weather-box {
+    width: 100%;
+}
+
+.date-now {
+    font-size: small;
+    color: #5d5d5d;
+}
+
+.weather-now {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.weather-now>div>div {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    >div {
+        display: flex;
+    }
+}
+
+.temp__container {
+    display: flex;
+    gap: 1rem;
+}
+
+.temperature {
+    border-right: 1px solid rgba(30, 30, 30, 0.5);
+    flex-direction: row !important;
+    gap: 0 !important;
+    font-size: 3rem;
+}
+
+.definition {
+    font-size: large;
+}
+
+.real-temp {
+    color: #434343;
+}
+
+.wind-hum-atmopres {
+    width: 100%;
+    display: flex;
+    font-size: large;
+}
+
+@media screen and (max-width: 640px) {
+    .wind-hum-atmopres {
+        flex-direction: column;
+    }
+}
+
+
+/* --------------HOURS WEATHER----------------------- */
+
+.widgets {
+    width: 100%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.hour-card {
+    padding: 0.5rem 0.2rem;
+    border-radius: 0.5rem;
+    background-color: rgb(213, 235, 255);
+    height: 8rem;
+    text-align: center;
+}
+
+
+/* FOOTER ---------------------------------------------------------*/
+
+footer {
+    background-color: aliceblue;
+}
+
+.container__footer {
+    display: grid;
+    max-width: 80%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    gap: 2rem;
+    align-content: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.container__footer>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer__img__container {
+    margin: 1rem 0;
+    display: flex;
+    width: fit-content;
+}
+
+.footer__img {
+    margin-right: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 4px;
+}
+
+.footer__img>a:hover {
+    color: #3aa0ff;
+    transition: all 0.3s;
+}
+
+footer ul li a {
+    color: black;
+}
+
+footer ul li {
+    margin: 0.4rem 0;
+}
+
+.container__footer1 {
+    grid-area: footer;
+}
+
+.container__footer2 {
+    grid-area: footeq;
+}
+
+@media screen and (max-width: 1000px) {
+    .container__footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+         :first-child {
+            grid-row: 2;
+        }
+    }
+}
