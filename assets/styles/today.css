@@ -248,13 +248,28 @@ main {
     }
 }
 
+@media screen and (min-width: 530px) {
+    .temperature {
+        border-right: 1px solid rgba(30, 30, 30, 0.5);
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .temp__container {
+        gap: 0;
+        border-bottom: 1px solid rgba(30, 30, 30, 0.5);
+    }
+}
+
 .temp__container {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
+    align-content: center;
+    justify-content: center;
 }
 
 .temperature {
-    border-right: 1px solid rgba(30, 30, 30, 0.5);
     flex-direction: row !important;
     gap: 0 !important;
     font-size: 3rem;
@@ -277,6 +292,7 @@ main {
 @media screen and (max-width: 640px) {
     .wind-hum-atmopres {
         flex-direction: column;
+        border-bottom: 1px solid rgba(30, 30, 30, 0.5);
     }
 }
 
